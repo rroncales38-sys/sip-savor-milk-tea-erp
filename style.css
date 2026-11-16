@@ -1,0 +1,49 @@
+:root{--brown:#5C3D2E;--cream:#F5EBDD;--caramel:#C8873A;--green:#7A9E6B;--blue:#5B86A8;--taro:#9B7FB5;--red:#C0504D;--paper:#FBF7F1;--ink:#2F2420;--line:#E0D3C0}
+*{box-sizing:border-box}
+body{margin:0;font-family:Calibri,Carlito,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper)}
+.bar{background:var(--brown);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:.7rem 1.2rem}
+.bar h1{font-size:1.15rem;margin:0}.user{font-size:.9rem;opacity:.85}
+.shell{display:grid;grid-template-columns:190px 1fr;min-height:calc(100vh - 52px)}
+.menu{background:var(--cream);padding:.6rem 0;display:flex;flex-direction:column}
+.menu button{background:none;border:0;text-align:left;padding:.8rem 1.1rem;font:inherit;color:#444;cursor:pointer}
+.menu button:hover{background:#ecdcc4}
+.menu button.active{background:var(--caramel);color:#fff;font-weight:700}
+.menu .reset{margin-top:auto;font-size:.85rem;color:var(--red)}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+main{padding:1.4rem;min-width:0}
+h2{font-family:Georgia,serif;color:var(--brown);margin:0 0 1rem;font-size:1.35rem}
+.pos{display:grid;grid-template-columns:1fr 300px;gap:1.2rem}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.8rem}
+.tile{border:0;border-radius:10px;color:#fff;padding:1.1rem .6rem;font:inherit;cursor:pointer;text-align:center;min-height:90px}
+.tile b{display:block;font-size:1.02rem;margin-bottom:.35rem}
+.tile:active{transform:scale(.97)}
+.ticket{background:#fff;border:1px solid var(--line);padding:1rem;align-self:start}
+.ticket h3{margin:0 0 .6rem;color:var(--brown);font-size:1rem}
+.line{display:flex;justify-content:space-between;align-items:center;font-size:.92rem;padding:.25rem 0;gap:.4rem}
+.line button{border:1px solid var(--line);background:#fff;width:24px;height:24px;cursor:pointer;border-radius:4px}
+.total{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin:.6rem 0;padding-top:.6rem;font-weight:700;font-size:1.1rem}
+.pay{width:100%;border:0;color:#fff;padding:.7rem;margin-top:.5rem;font:inherit;font-weight:700;border-radius:6px;cursor:pointer}
+.pay.cash{background:var(--green)}.pay.gcash{background:var(--blue)}
+.empty{color:#8a7b70;font-style:italic;margin:.4rem 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.8rem;margin-bottom:1.2rem}
+.kpi{background:#fff;border:2px solid var(--c);border-radius:10px;padding:.8rem;text-align:center}
+.kpi small{display:block;color:#555}.kpi b{font-size:1.5rem;color:var(--c)}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:.93rem}
+th{background:var(--brown);color:#fff;text-align:left;padding:.55rem .7rem}
+td{padding:.5rem .7rem;border-bottom:1px solid var(--line)}
+tr:nth-child(even) td{background:#F7F0E6}
+.tag{display:inline-block;color:#fff;border-radius:10px;padding:.1rem .6rem;font-size:.8rem;font-weight:700}
+.tag.ok{background:var(--green)}.tag.low{background:var(--red)}.tag.req{background:var(--caramel)}.tag.rec{background:var(--blue)}
+.act{border:0;background:var(--caramel);color:#fff;padding:.3rem .7rem;border-radius:5px;cursor:pointer;font:inherit}
+.note{color:#7a6a60;font-size:.88rem;margin-top:.8rem}
+#toast{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--brown);color:#fff;padding:.7rem 1.2rem;border-radius:8px;transition:transform .25s;max-width:90vw}
+#toast.show{transform:translateX(-50%) translateY(0)}
+#toast.err{background:var(--red)}
+.chart{display:flex;align-items:flex-end;gap:.7rem;height:230px;background:#fff;border:1px solid var(--line);padding:1rem 1rem .6rem;margin-bottom:1.2rem}
+.col{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.25rem;min-width:0}
+.col span{font-size:.78rem;color:#555}.col small{color:#555}
+.cbar{width:70%;background:var(--caramel);min-height:2px}.col:last-child .cbar{background:var(--brown)}
+h2.sub{font-size:1.1rem;margin-top:1.4rem}
+@media(max-width:760px){.shell{grid-template-columns:1fr}.menu{flex-direction:row;overflow-x:auto}.menu .reset{margin:0 0 0 auto}.pos{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#toast{transition:none}}
