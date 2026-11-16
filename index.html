@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sip & Savor Milk Tea | ERP Simulation</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Sip &amp; Savor &nbsp;|&nbsp; <span id="page-title">Dashboard</span></h1>
+  <span class="user">Admin (simulation)</span>
+</header>
+<div class="shell">
+  <nav class="menu" id="menu" aria-label="Modules">
+    <button data-view="dashboard" class="active">Dashboard</button>
+    <button data-view="pos">Point of Sale</button>
+    <button data-view="inventory">Inventory</button>
+    <button data-view="purchasing">Purchasing</button>
+    <button data-view="accounting">Accounting</button>
+    <button data-view="reports">Reports</button>
+    <button data-action="reset" class="reset">Reset demo data</button>
+  </nav>
+  <main id="view"></main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
